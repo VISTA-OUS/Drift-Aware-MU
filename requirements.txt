@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------------------
+# Drift-Aware-MU : dependencies of source/feature_unlearning_gbt_source.ipynb
+#
+# Python : 3.10 - 3.12 (notebook was authored/run on Python 3.12.3).
+#          Python 3.13 is NOT supported by numpy==1.26.4 (no wheels).
+# Install: pip install -r requirements.txt
+#
+# Jupyter itself is only a runner and is intentionally not pinned here:
+#          pip install jupyterlab        (or `notebook`, or use VS Code)
+# ---------------------------------------------------------------------------
+
+# --- core numerics / data ---
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+
+# --- machine learning ---
+# GradientBoostingClassifier (+ estimators_ / tree_ internals), RandomForest/MLP regressors,
+# preprocessing and metrics. XGBoost / LightGBM are intentionally NOT used.
+scikit-learn==1.6.1
+# SMOTE and RandomOverSampler (class balancing, Part 1b)
+imbalanced-learn==0.13.0
+
+# --- plotting ---
+matplotlib==3.9.4
+seaborn==0.13.2
+
+# --- data download (used by the `!gdown` cell / Option A in the notebook) ---
+gdown==5.2.0
+
+# Standard-library modules used by the notebook (copy, time, warnings) need no installation.
